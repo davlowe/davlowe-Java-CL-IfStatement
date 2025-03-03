@@ -12,8 +12,13 @@ public class IfStatements {
      * @return - x if bool is true, otherwise return y.
      */
     public int exercise1(boolean bool, int x, int y) {
-        return 0;
+        if(bool){
+        return x;
     }
+        else{
+            return y;
+        }
+}
 
     /**
      * This method should return "Positive" if the parameter `x` is a positive number, "Negative" if the parameter `x` is a negative number, or "Zero" if the parameter `x` is zero.
@@ -21,8 +26,18 @@ public class IfStatements {
      * @param x - a number that could be positive, negative, or zero.
      * @return - "Positive", "Negative", or "Zero" depending on the input.
      */
-    public String exercise2(int x) {
-        return null;
+    public String exercise2 (int x) {
+        if(x>0){
+            return "Positive";
+        }
+        else if(x<0){
+            return "Negative";
+        }
+        else{
+            return "Zero";
+        }
+
+
     }
 
     /**
@@ -39,7 +54,25 @@ public class IfStatements {
      * @param year - an integer representing a year.
      * @return - "Yes", "No", or "Not quite!" depending on the input. 
      */
-    public String exercise3(int year) {
-        return null;
+    public String exercise3 (int year) {
+        String ret = "";
+        if(year%4!=0){
+            ret = "No";
+        }
+        else if(year%4==0){
+            if(year%100==0 && year%400!=0){
+                ret = "Not quite";
+            }
+            else if(year%100==0 && year%400==0){
+                ret = "Yes";
+            }
+            else{
+                ret = "Yes";
+            }
+        }
+
+        return ret;
+
     }
+    
 }
